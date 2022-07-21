@@ -2,28 +2,27 @@
   <header :class="{'scrolledNav' : scrollPosition}">
     <nav>
       <div class="branding">
-        <img src="@/assets/logo/metaform.png" alt="Metaform logo">
+        <img src="@/assets/logo/metaform.png" alt="Metaform logo" />
       </div>
-      <ul v-if="!mobile" class="navigation">
+      <ul v-show="!mobile" class="navigation">
         <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
-        <li><router-link class="link" :to="{name: 'About'}">О компании</router-link></li>
-        <li><router-link class="link" :to="{name: 'Production'}">Каталог</router-link></li>
-        <li><router-link class="link" :to="{name: 'Contacts'}">Контакты</router-link></li>
+        <li><router-link class="link" :to="{name: ''}">О компании</router-link></li>
+        <li><router-link class="link" :to="{name: ''}">Каталог</router-link></li>
+        <li><router-link class="link" :to="{name: ''}">Контакты</router-link></li>
       </ul>
       <div class="icon">
-        <i @click="toggleMobileNav()" v-if="mobile" class="far fa-bars" :class="{'icon-active' : mobileNav}"></i>
+        <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active' : mobileNav}"></i>
       </div>
       <transition name="mobile-nav">
-        <ul v-if="mobileNav" class="dropdown-nav">
+        <ul v-show="mobileNav" class="dropdown-nav">
           <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
-          <li><router-link class="link" :to="{name: 'About'}">О компании</router-link></li>
-          <li><router-link class="link" :to="{name: 'Production'}">Каталог</router-link></li>
-          <li><router-link class="link" :to="{name: 'Contacts'}">Контакты</router-link></li>
+          <li><router-link class="link" :to="{name: ''}">О компании</router-link></li>
+          <li><router-link class="link" :to="{name: ''}">Каталог</router-link></li>
+          <li><router-link class="link" :to="{name: ''}">Контакты</router-link></li>
       </ul>
       </transition>
     </nav>
   </header>
-
 </template>
 
 <script>
@@ -33,9 +32,13 @@ export default {
     return {
       scrollPosition: null,
       mobile: false,
-      mobileNav: null,
+      mobileNav: false,
       windowWidth: null
     };
+  },
+  created() {
+    window.addEventListener('resize', this.checkScreen);
+    this.checkScreen();
   },
   methods: {
     toggleMobileNav() {
@@ -44,7 +47,7 @@ export default {
 
     checkScreen() {
       this.windowWidth = window.innerWidth;
-      if(this.windowWidth <= 750) {
+      if(this.windowWidth <= 785) {
         this.mobile = true;
         return;
       }
@@ -61,6 +64,7 @@ export default {
 <style scoped lang="scss">
   header {
     background: url("../assets/background/bgpattern1.png") repeat;
+    //background-color: rgba(0,0,0,0.8);
     z-index: 99;
     width: 100%;
     position: fixed;
@@ -126,12 +130,13 @@ export default {
         i {
           cursor: pointer;
           font-size: 24px;
+          color: #fff;
           transition: 0.8 ease all;
         } 
       }
 
       .icon-active {
-        transform: rotate(180deg);
+        transform: rotate(0.5turn);
       }
 
       .dropdown-nav {

@@ -19,8 +19,7 @@ import VideoBack from '@/components/VideoBack.vue'
 export default {
   name: 'Home',
   components: {
-    Navigation,
-    VideoBack
+    Navigation
 }
 }
 </script>
