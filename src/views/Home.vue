@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="home">
     <section class="hero">
       <div class="hero-text container">
@@ -7,12 +7,10 @@
           <h2>Whith my try</h2>
           <hr />
           </div>
-          <img alt="Metaform ico" src="../assets/logo/metaform.png">
-         <!--  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-          <!-- <VideoBack></VideoBack> -->
+          <VideoBack></VideoBack>
       </section>
     </div>
-  </template>
+  </template> -->
   <script>
 // @ is an alias to /src
 import Navigation from '@/components/Navigation.vue'
@@ -27,7 +25,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .hero {
+  .hero-text {
     background-color: #fff;
   }
 </style>

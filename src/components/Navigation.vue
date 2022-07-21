@@ -34,16 +34,48 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-nav {
-  padding: 30px;
+  header {
+    background: url("../assets/background/bgpattern1.png") repeat;
+    z-index: 99;
+    width: 100%;
+    position: fixed;
+    transition: .5s ease all;
+    nav {
+      display: flex;
+      flex-direction: row;
+      padding: 12px 0;
+      width: 90%;
+      margin: 0 auto;
+      @media(min-width: 1140px) {
+        max-width: 1140px;
+      }
+    }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    ul,
+    .link {
+      font-weight: 500;
+      color: #fff;
+      list-style: none;
+      text-decoration: none;
+    }
+    li {
+      text-transform: uppercase;
+      padding: 16px;
+      margin-left: 16px;
+    }
+    .link {
+      font-size: 14px;
+      transition: .5s ease all;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        color: #00afea;
+        border-color: #00afea;
+      }
+    }
+    .branding {
+      display: flex;
+      align-items: center;
     }
   }
-}
 </style>
