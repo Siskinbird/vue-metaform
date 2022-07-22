@@ -14,10 +14,13 @@
 
 <style scoped lang="scss">
     #myVideo {
-    position: fixed;
+    position: relative;
+    /* filter: opacity(70%); */
+    filter: grayscale(70%);
+    top:60px;
     right: 0;
     bottom: 0;
-    min-width: 100%;
+    max-width: 100%;
     height: auto;
 }
 </style>

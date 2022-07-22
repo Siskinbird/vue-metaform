@@ -2,7 +2,7 @@
   <header :class="{'scrolledNav' : scrollPosition}">
     <nav>
       <div class="branding">
-        <img src="@/assets/logo/metaform.png" alt="Metaform logo" />
+        <a href="https://metaform.ru/"><img src="@/assets/logo/metaform.png" alt="Metaform logo" /></a>
       </div>
       <ul v-show="!mobile" class="navigation">
         <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
@@ -47,7 +47,7 @@ export default {
 
     checkScreen() {
       this.windowWidth = window.innerWidth;
-      if(this.windowWidth <= 785) {
+      if(this.windowWidth <= 820) {
         this.mobile = true;
         return;
       }
@@ -131,12 +131,12 @@ export default {
           cursor: pointer;
           font-size: 24px;
           color: #fff;
-          transition: 0.8 ease all;
+          transition: 0.8s ease all;
         } 
       }
 
       .icon-active {
-        transform: rotate(0.5turn);
+        transform: rotate(0.25turn);
       }
 
       .dropdown-nav {
