@@ -1,8 +1,10 @@
 <template>
-    <div class="video-player">
-        <video autoplay muted loop id="myVideo">
-            <source src="../assets/video/1.mp4" type="video/mp4">
-        </video>
+    <div class="intro">
+        <div class="video-player">
+         <video autoplay muted loop id="myVideo">
+                <source src="../assets/video/1.mp4" type="video/mp4">
+         </video>    
+        </div>
     </div>
 </template>
 
@@ -13,14 +15,33 @@
 </script>
 
 <style scoped lang="scss">
-    #myVideo {
+
+.video-player {
     position: relative;
-    /* filter: opacity(70%); */
-    filter: grayscale(70%);
-    top:60px;
-    right: 0;
-    bottom: 0;
-    max-width: 100%;
-    height: auto;
+    padding-bottom: 56%;
+    z-index: 1;
+    }
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: auto; 
+}
+.intro {
+    position: relative;
+    max-height: 60vh;
+    overflow: hidden;
+}
+.intro:after {
+    content: '';
+    display: block;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width:100%;
+    height: 100%;
 }
 </style>
