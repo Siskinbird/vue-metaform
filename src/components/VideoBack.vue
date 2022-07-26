@@ -72,15 +72,8 @@
     @media(max-width: 340px) {
         top: 60%;
     }
-
-
-/*     @media(min-width: 755px) {
-        top: 28%;
-    }
-    
-     */
-
 }
+
 .intro__block {
     display: flex;
     justify-content: center;
@@ -99,10 +92,8 @@
     @media(max-width: 418px) {
         font-size: 16px;
     }
-    /* @media(max-width: 340px) {
-        font-size: 16px;
-    } */
 }
+
 .intro__subtitle {
     padding: 5px;
     margin: 8px auto;
@@ -114,8 +105,8 @@
     @media(max-width: 590px) {
         display: none;
     }
+}
 
-    }
 p {
     text-align: center;
     padding: 5px;
@@ -124,5 +115,6 @@ p {
         font-size: 10px;
     }
 }
+
 </style>
         

@@ -2,18 +2,21 @@
   <div class="app">
     <Navigation />
     <VideoBack />
+    <About />
     <router-view/>
     </div>
 </template>
 
 <script>
   import Navigation from './components/Navigation.vue';
-   import VideoBack from './components/VideoBack.vue';
+  import VideoBack from './components/VideoBack.vue';
+  import About from './components/About.vue';
   export default {
     name: "App",
     components: { 
       Navigation,
-      VideoBack
+      VideoBack,
+      About
     }
 };
 </script>
