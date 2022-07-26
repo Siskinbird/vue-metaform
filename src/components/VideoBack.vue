@@ -6,8 +6,10 @@
          </video>
         </div>
         <div class="intro__content">
-            <div class="intro__block">
-                <h1 class="intro__title">МЕТАФОРМ: Дочь,  хочешь заебаться? а заебешься!!!</h1>
+            <div class="intro__block container">
+                <h1 class="intro__title">Компания ООО "МЕТАФОРМ"</h1>
+                <br><p class="intro__subtitle" >Отечественный производитель сетчатых изделий из проволоки</p>
+                <p class="intro__subtitle-description">Применяем современное профессиональное оборудование разных стран (России, Италии и Германии), а также эффективно внедряем передовые технологии в производстве и бизнесе, что позволяет нам быть лидером в выпуске проволочных изделий и изготавливать качественный товар.</p>
             </div>
         </div>
     </div>
@@ -37,6 +39,8 @@
     position: relative;
     max-height: 50vh;
     overflow: hidden;
+    background: url('../assets/video/poster.png') center no-repeat;
+    background-size: cover;
 }
 .intro:after {
     content: '';
@@ -51,33 +55,69 @@
 }
 .intro__content {
     position: absolute;
-    top: 0;
+    top: 45%;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
     z-index: 3;
     width: 100%;
-    height: 100%;
-    
+    height: auto;
+    color: #fff;
+    @media(max-width: 1130px) {
+        top: 40%;
+    }
+    @media(max-width: 865px) {
+        top: 30%;
+    }
+    @media(max-width: 556px) {
+        top: 44%;
+    }
+    @media(max-width: 420px) {
+        top: 28%;
+    }
+
 }
 .intro__block {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
 .intro__title {
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     font-size: 45px;
-    color: #fff;
-    @media(max-width: 600px) {
+    width: 65%;
+    @media(max-width: 726px) {
         font-size: 24px;
     }
     @media(max-width: 410px) {
         padding-top: 40px;
         font-size: 18px;
     }
+    @media(max-width: 340px) {
+        font-size: 14px;
+    }
+}
+.intro__subtitle {
+    padding: 5px;
+    margin: 8px auto;
+    @media(max-width: 640px) {
+        margin: 0 10px;
+    }
+}
+.intro__subtitle-description{
+    @media(max-width: 556px) {
+        display: none;
+    }
+
+    }
+p {
+    text-align: center;
+    padding: 5px;
+    margin: 5px 8px;
+    @media(max-width: 340px) {
+        font-size: 10px;
+    }
 }
 </style>
+        

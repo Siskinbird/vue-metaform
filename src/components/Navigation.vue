@@ -47,7 +47,7 @@ export default {
 
     checkScreen() {
       this.windowWidth = window.innerWidth;
-      if(this.windowWidth <= 820) {
+      if(this.windowWidth <= 865) {
         this.mobile = true;
         return;
       }
