@@ -64,7 +64,6 @@ export default {
 <style scoped lang="scss">
   header {
     background: url("../assets/background/bgpattern1.png") repeat;
-    //background-color: rgba(0,0,0,0.8);
     z-index: 99;
     width: 100%;
     position: fixed;
@@ -117,6 +116,7 @@ export default {
         align-items: center;
         flex: 1;
         justify-content: flex-end;
+        
       }
 
       .icon {
@@ -149,7 +149,6 @@ export default {
         background-color: #fff;
         top: 0;
         left: 0;
-
         li {
           margin-left: 0;
           .link {
