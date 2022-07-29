@@ -1,7 +1,7 @@
 <template>
     <div class="about">
         
-        <section class="container">
+        <section class="container animate__animated animate__fadeInRight">
             <h2 class="about__title">О КОМПАНИИ ООО “<span>МЕТАФОРМ</span>”</h2>
             <p>Компания ООО "МЕТАФОРМ" – отечественный производитель сетчатых изделий из проволоки.</p>
             <p>Фирма работает с 2000 года, и за прошедшее время накопила громадный опыт работы
@@ -57,6 +57,7 @@ p {
     margin: 5px;
     padding: 5px;
 }
+
 
 
 .about__subtitle {
