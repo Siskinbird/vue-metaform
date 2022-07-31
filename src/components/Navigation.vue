@@ -2,7 +2,7 @@
   <header :class="{'scrolledNav' : scrollPosition}">
     <nav>
       <div class="branding">
-        <a href="https://metaform.ru/"><img src="@/assets/logo/metaform.png" alt="Metaform logo" /></a>
+        <a href="https://metaform.ru/"><img src="@/assets/logo/metaform_full.svg" alt="Metaform logo" /></a>
       </div>
       <ul v-show="!mobile" class="navigation">
         <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
