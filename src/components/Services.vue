@@ -5,16 +5,28 @@
             <div class="services__body-items
             container">
                 <div class="services-item" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="description">Производство новых изделий по образцам или эскизам заказчика</div>
+                    <div class="description">Изготовление комплектующих для других производителей</div>
                 </div>
                 <div class="services-item" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="description">Производство новых изделий по образцам или эскизам заказчика</div>
+                    <div class="description">Выпуск продукции под торговой маркой заказчика</div>
+                </div>
+                <div class="services-item" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="description">Покраска в любой цвет по цветовой палитре RAL</div>
+                </div>
+                <div class="services-item" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="description">Изготовление изделий методом штамповки</div>
+                </div>
+                <div class="services-item" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="description">Рубка листового металла</div>
+                </div>
+                <div class="services-item" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="description">Гибка круглой и профильной трубы</div>
                 </div>
                 <div class="services-item" data-aos="fade-right" data-aos-duration="1000">
                     <div class="description">Производство новых изделий по образцам или эскизам заказчика</div>
                 </div>
                 <div class="services-item" data-aos="fade-left" data-aos-duration="1000">
-                    <div class="description">Производство новых изделий по образцам или эскизам заказчика</div>
+                    <div class="description">Порошковая покраска изделий</div>
                 </div>
             </div>          
         </div>
@@ -84,15 +96,23 @@
             width: 236px; 
             font-size: 10px;        
         }
-
-         
     }
+    /* .description:nth-child(2n) {
+        align-items: flex-start;
+    } */
     .services-item {
+        cursor: pointer;
         width: 471px;
         height: 125px;
         background: url("../assets/services/Group1.svg") 0 0/100% 100% no-repeat;
         max-width: 100%; 
         margin-top: 20px;
+    }
+    .services-item:nth-child(2n) {
+        background: url("../assets/services/group2.svg") 0 0/100% 100% no-repeat;
+        .description {
+           margin: 8px !important;
+        }
     }
     
 </style>
