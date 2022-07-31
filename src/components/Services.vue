@@ -1,9 +1,22 @@
 <template>
     <section class="services">
-        <div  data-aos="fade-right">
-            <div class="services__body">
-             <h2 class="services__body-title">Производство, изготовление и прочие услуги</h2>           
-            </div>
+        <div class="services__body">
+            <h2 class="services__body-title" data-aos="fade-right" data-aos-duration="1000">Производство, изготовление и прочие услуги</h2>
+            <div class="services__body-items
+            container">
+                <div class="services-item" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="description">Производство новых изделий по образцам или эскизам заказчика</div>
+                </div>
+                <div class="services-item" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="description">Производство новых изделий по образцам или эскизам заказчика</div>
+                </div>
+                <div class="services-item" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="description">Производство новых изделий по образцам или эскизам заказчика</div>
+                </div>
+                <div class="services-item" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="description">Производство новых изделий по образцам или эскизам заказчика</div>
+                </div>
+            </div>          
         </div>
     </section>
 </template>
@@ -29,48 +42,57 @@
 
     h2 {
         text-align: center;
-        font-size: 42px;
+        text-transform: uppercase;
+        font-size: 38px;
         font-weight: 500;
         padding: 5px;
-        margin: 60px;
-        margin-top: 400px;
+        margin: 60px auto;
         transition: ease-in .9s;
-    }
-    /* .services__body-title {
-        
-    } */
 
-/*     .title-enter-active, .title-leave-active {
-        //transition: all .9s;
-        //transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    .title-enter, .title-leave-to {
-        //transform: translateX(-200%);
-        opacity: 1;
-    } */
-
-</style>
-
-<!-- Animation -->
-<!--  *-enter --> <!-- *-leave -->
-<!-- *-enter-active --> <!-- *-leave-active -->
-<!-- *-enter-to --> <!-- *-leave-to -->
-
-        <!-- created() {
-            window.addEventListener('scroll', this.checkScroll);
-            this.checkScroll();
-        },
-      methods: {
-
-        checkScroll() {
-            this.scrollPosition = window.scrollY;
-                if(this.scrollY >= 500) {
-                    this.show = true;
-                    return;
-                }
-            this.show = false;
-            return;
+        @media(max-width: 620px) {
+            font-size: 34px;
+            margin: 30px auto;
         }
-    } -->
+        @media(max-width: 450px) {
+            font-size: 28px;
+        }
+    }
+    .services__body-items {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    .description {
+        width: 340px;
+        height: 102px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 12px 0 auto auto;
+        align-items: center;
+        @media(max-width: 446px) {
+            font-size: 12px;
+                       
+        }
+        @media(max-width: 440px) {
+            width: 236px; 
+            font-size: 10px;        
+        }
+
+         
+    }
+    .services-item {
+        width: 471px;
+        height: 125px;
+        background: url("../assets/services/Group1.svg") 0 0/100% 100% no-repeat;
+        max-width: 100%; 
+        margin-top: 20px;
+    }
+    
+</style>
