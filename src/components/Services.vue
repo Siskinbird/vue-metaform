@@ -1,12 +1,12 @@
 <template>
     <section class="services">
-        <div class="services__body">
-            <section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">
-            <h2 class="services__body-title animate__animated animate__fadeInLeft">Производство, изготовление и прочие услуги</h2></section>            
+        <div  data-aos="fade-right">
+            <div class="services__body">
+             <h2 class="services__body-title">Производство, изготовление и прочие услуги</h2>           
+            </div>
         </div>
     </section>
 </template>
-<!-- <script type="javascript" src="../wow.min.js"></script> -->
 <script>
     export default {
       name: 'Services',
@@ -14,24 +14,8 @@
         return {
             show: false,
             scrollPosition: null
-            };
-        },
-//        created() {
-//            window.addEventListener('scroll', this.checkScroll);
-//            this.checkScroll();
-//        },
-//      methods: {
-//
-//        checkScroll() {
-//            this.scrollPosition = window.scrollY;
-//                if(this.scrollY >= 500) {
-//                    this.show = true;
-//                    return;
-//                }
-//            this.show = false;
-//            return;
-//        }
-//    }
+        };
+    }
 };
 
 </script>
@@ -73,3 +57,20 @@
 <!--  *-enter --> <!-- *-leave -->
 <!-- *-enter-active --> <!-- *-leave-active -->
 <!-- *-enter-to --> <!-- *-leave-to -->
+
+        <!-- created() {
+            window.addEventListener('scroll', this.checkScroll);
+            this.checkScroll();
+        },
+      methods: {
+
+        checkScroll() {
+            this.scrollPosition = window.scrollY;
+                if(this.scrollY >= 500) {
+                    this.show = true;
+                    return;
+                }
+            this.show = false;
+            return;
+        }
+    } -->

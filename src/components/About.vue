@@ -1,7 +1,7 @@
 <template>
     <div class="about">
         
-        <section class="container animate__animated animate__fadeInRight">
+        <section class="container" data-aos="zoom-in" data-aos-duration="1000">
             <h2 class="about__title">О КОМПАНИИ ООО “<span>МЕТАФОРМ</span>”</h2>
             <p>Компания ООО "МЕТАФОРМ" – отечественный производитель сетчатых изделий из проволоки.</p>
             <p>Фирма работает с 2000 года, и за прошедшее время накопила громадный опыт работы
