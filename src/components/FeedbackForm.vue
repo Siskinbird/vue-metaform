@@ -1,6 +1,7 @@
 <template>
-    <section class="feedback container">
-        <div class="feedback__body" data-aos="zoom-in" data-aos-duration="1000">
+    <section class="feedback">
+        <div class="container">
+        <div class="feedback__body container" data-aos="zoom-in" data-aos-duration="1000">
             <div class="form__main">
                 <div class="form__title">
                     <h2>Заполните форму для <span>связи с нами.</span></h2>
@@ -13,17 +14,18 @@
                     <input placeholder="Фамилия" type="text" name="surName" id="surName">
                 </label>
                 <label for="email">
-                    <input placeholder="E-mail" type="email" name="email" id="email">
+                    <input required placeholder="E-mail" type="email" name="email" id="email">
                 </label>
-                <textarea name="message" id="message" cols="45" rows="1" placeholder="Сообщение"></textarea>
+                <textarea required name="message" id="message" cols="45" rows="1" placeholder="Сообщение"></textarea>
                 
-                <button class="form__button">
+                <button type="submit" class="form__button">
                     <span>Отправить сообщение</span>
                 </button>
                 </form>
             </div>
             <div class="form__background"></div>
         </div>
+    </div>
     </section>
 </template>
 
@@ -34,6 +36,14 @@
 </script>
 
 <style scoped lang="scss">
+    .container {
+        padding: 0;
+    }
+    .feedback {
+        margin-top: 60px;
+        background: url('../assets/background/bgpattern2.png') repeat;
+        padding: 10px;
+    }
     .feedback__body {
         background:  url('../assets/background/shesternya.svg') -67px -66px no-repeat;
         display: flex;
