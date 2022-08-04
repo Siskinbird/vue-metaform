@@ -1,6 +1,6 @@
 <template>
     <section class="feedback container">
-        <div class="feedback__body">
+        <div class="feedback__body" data-aos="zoom-in" data-aos-duration="1000">
             <div class="form__main">
                 <div class="form__title">
                     <h2>Заполните форму для <span>связи с нами.</span></h2>
@@ -35,6 +35,7 @@
 
 <style scoped lang="scss">
     .feedback__body {
+        background:  url('../assets/background/shesternya.svg') -67px -66px no-repeat;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -45,11 +46,12 @@
         border-radius: 36px;
     }
     .form__background {
-        background:  url('../assets/background/shest.svg') 110px -330px no-repeat;
+        background:  url('../assets/background/form__background.svg') -1px -5px no-repeat;
         width: 429px;
         height: 327px;
     }
     .form__main {
+        
         max-width: 440px;
         padding: 16px;
         height: auto;
@@ -64,6 +66,9 @@
             }
         }
     }
+    form {
+        margin-top: 60px;
+    }
     input {
         margin: 10px 0 10px 0;
         border: none;
@@ -75,7 +80,7 @@
         margin-left: 20px;
     }
     textarea {
-        resize: none;
+        resize: vertical;
         margin: 10px 0 10px 0;
         border: none;
         border-bottom: 1px solid #6b6b6b;
