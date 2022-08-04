@@ -13,13 +13,15 @@
   import VideoBack from './components/VideoBack.vue';
   import About from './components/About.vue';
   import Services from './components/Services.vue';
+  import FeedbackForm from './components/FeedbackForm.vue';
   export default {
     name: "App",
     components: { 
       Navigation,
       VideoBack,
       About,
-      Services
+      Services,
+      FeedbackForm
     }
 };
 </script>
