@@ -4,6 +4,7 @@
     <VideoBack />
     <About />
     <Services />
+    <FeedbackForm />
     <router-view/>
     </div>
 </template>
