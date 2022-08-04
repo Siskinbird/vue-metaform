@@ -91,11 +91,26 @@
     }
     textarea {
         resize: vertical;
-        margin: 10px 0 10px 0;
+        margin: 20px 0 10px 0;
+        padding-bottom: 12px;
         border: none;
         border-bottom: 1px solid #6b6b6b;
         background-color: transparent;
         outline: none;
+    }
+    input[type=text] {
+    padding: 12px 0;
+    margin: 8px 0;
+    box-sizing: border-box;
+    }
+    input[type=email] {
+
+    padding: 12px 0;
+    margin: 8px 0;
+    box-sizing: border-box;
+    }
+    #email {
+    width: 338px;
     }
     /* #firstName {
         border: none;
