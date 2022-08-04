@@ -39,13 +39,17 @@
     .container {
         padding: 0;
     }
+
     .feedback {
         margin-top: 60px;
         background: url('../assets/background/bgpattern2.png') repeat;
         padding: 10px;
     }
+
     .feedback__body {
         background:  url('../assets/background/shesternya.svg') -67px -66px no-repeat;
+        background-color: #fff;
+        box-shadow: 8px 8px 10px 0px rgba(34, 60, 80, 0.2);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -55,13 +59,14 @@
         border: 9px solid #6ca09f;
         border-radius: 36px;
     }
+
     .form__background {
         background:  url('../assets/background/form__background.svg') -1px -5px no-repeat;
         width: 429px;
         height: 327px;
     }
-    .form__main {
-        
+
+    .form__main {        
         max-width: 440px;
         padding: 16px;
         height: auto;
@@ -76,9 +81,11 @@
             }
         }
     }
+
     form {
         margin-top: 60px;
     }
+
     input {
         margin: 10px 0 10px 0;
         border: none;
@@ -86,9 +93,11 @@
         background-color: transparent;
         outline: none;
     }
+
     input#surName {
         margin-left: 20px;
     }
+
     textarea {
         resize: vertical;
         margin: 20px 0 10px 0;
@@ -98,11 +107,13 @@
         background-color: transparent;
         outline: none;
     }
+
     input[type=text] {
     padding: 12px 0;
     margin: 8px 0;
     box-sizing: border-box;
     }
+
     input[type=email] {
 
     padding: 12px 0;
@@ -112,13 +123,6 @@
     #email {
     width: 338px;
     }
-    /* #firstName {
-        border: none;
-        border-bottom: 1px solid #6b6b6b;
-        background-color: transparent;
-        outline: none;
-
-    } */
     .form__button {
         padding: 10px;
         margin-top: 32px;

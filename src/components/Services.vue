@@ -102,12 +102,19 @@
     } */
     .services-item {
         cursor: pointer;
+        border-radius: 13px;
         width: 471px;
         height: 125px;
         background: url("../assets/services/Group1.svg") 0 0/100% 100% no-repeat;
         max-width: 100%; 
         margin-top: 20px;
+        box-shadow: 8px 8px 10px 0px rgba(34, 60, 80, 0.2);
+        transition: all .3s;
+        &:hover {
+            transform: scale(110%);
+        }
     }
+
     .services-item:nth-child(2n) {
         background: url("../assets/services/group2.svg") 0 0/100% 100% no-repeat;
         .description {
