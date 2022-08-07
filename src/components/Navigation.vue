@@ -2,28 +2,27 @@
   <header :class="{'scrolledNav' : scrollPosition}">
     <nav>
       <div class="branding">
-        <img src="@/assets/logo/metaform.png" alt="Metaform logo">
+        <a href="https://metaform.ru/"><img src="@/assets/logo/metaform_full.svg" alt="Metaform logo" /></a>
       </div>
-      <ul v-if="!mobile" class="navigation">
+      <ul v-show="!mobile" class="navigation">
         <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
-        <li><router-link class="link" :to="{name: 'About'}">О компании</router-link></li>
-        <li><router-link class="link" :to="{name: 'Production'}">Каталог</router-link></li>
-        <li><router-link class="link" :to="{name: 'Contacts'}">Контакты</router-link></li>
+        <li><router-link class="link" :to="{name: ''}">О компании</router-link></li>
+        <li><router-link class="link" :to="{name: ''}">Каталог</router-link></li>
+        <li><router-link class="link" :to="{name: ''}">Контакты</router-link></li>
       </ul>
       <div class="icon">
-        <i @click="toggleMobileNav()" v-if="mobile" class="far fa-bars" :class="{'icon-active' : mobileNav}"></i>
+        <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active' : mobileNav}"></i>
       </div>
       <transition name="mobile-nav">
-        <ul v-if="mobileNav" class="dropdown-nav">
+        <ul v-show="mobileNav" class="dropdown-nav">
           <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
-          <li><router-link class="link" :to="{name: 'About'}">О компании</router-link></li>
-          <li><router-link class="link" :to="{name: 'Production'}">Каталог</router-link></li>
-          <li><router-link class="link" :to="{name: 'Contacts'}">Контакты</router-link></li>
+          <li><router-link class="link" :to="{name: ''}">О компании</router-link></li>
+          <li><router-link class="link" :to="{name: ''}">Каталог</router-link></li>
+          <li><router-link class="link" :to="{name: ''}">Контакты</router-link></li>
       </ul>
       </transition>
     </nav>
   </header>
-
 </template>
 
 <script>
@@ -33,9 +32,13 @@ export default {
     return {
       scrollPosition: null,
       mobile: false,
-      mobileNav: null,
+      mobileNav: false,
       windowWidth: null
     };
+  },
+  created() {
+    window.addEventListener('resize', this.checkScreen);
+    this.checkScreen();
   },
   methods: {
     toggleMobileNav() {
@@ -44,7 +47,7 @@ export default {
 
     checkScreen() {
       this.windowWidth = window.innerWidth;
-      if(this.windowWidth <= 750) {
+      if(this.windowWidth <= 865) {
         this.mobile = true;
         return;
       }
@@ -113,6 +116,7 @@ export default {
         align-items: center;
         flex: 1;
         justify-content: flex-end;
+        
       }
 
       .icon {
@@ -126,12 +130,13 @@ export default {
         i {
           cursor: pointer;
           font-size: 24px;
-          transition: 0.8 ease all;
+          color: #fff;
+          transition: 0.8s ease all;
         } 
       }
 
       .icon-active {
-        transform: rotate(180deg);
+        transform: rotate(0.25turn);
       }
 
       .dropdown-nav {
@@ -144,7 +149,6 @@ export default {
         background-color: #fff;
         top: 0;
         left: 0;
-
         li {
           margin-left: 0;
           .link {

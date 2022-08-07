@@ -1,10 +1,9 @@
-import Vue from 'vue'
+import AOS from 'aos'
+import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-Vue.config.productionTip = false
+createApp(App).use(router).mount('#app')
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+AOS.init();
+
