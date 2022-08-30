@@ -36,6 +36,12 @@
 </script>
 
 <style scoped lang="scss">
+    @mixin tablet-portrait {
+        @media (max-width: 600px) { @content; }
+    }
+    @mixin tablet-small {
+        @media (max-width: 500px) { @content; }
+    }
     .container {
         padding: 0;
     }
@@ -58,12 +64,19 @@
         margin: 60px 44px;
         border: 9px solid #6ca09f;
         border-radius: 36px;
+        @include tablet-small {
+            margin: 0;
+             border: 4px solid #6ca09f;
+        }
     }
 
     .form__background {
         background:  url('../assets/background/form__background.svg') -1px -5px no-repeat;
         width: 429px;
         height: 327px;
+        @include tablet-small {
+            display: none;
+        }     
     }
 
     .form__main {        
@@ -79,11 +92,22 @@
                 color: #6ca09f;
                 font-weight: 500;
             }
+            @include tablet-portrait {
+                font-size: 28px;
+                text-align: center;
+            }
+        }
+            @include tablet-small {
+            margin: 22px auto;
         }
     }
 
     form {
         margin-top: 60px;
+        @include tablet-small {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     input {
@@ -94,8 +118,18 @@
         outline: none;
     }
 
+    input#firstName {
+        @include tablet-small {
+            width: 260px;
+        }
+    }
+
     input#surName {
         margin-left: 20px;
+            @include tablet-small {
+                margin-left: 0;
+                width: 260px;
+            }
     }
 
     textarea {
@@ -106,6 +140,9 @@
         border-bottom: 1px solid #6b6b6b;
         background-color: transparent;
         outline: none;
+        @include tablet-small {
+            width: 260px;
+        }
     }
 
     input[type=text] {
@@ -121,7 +158,10 @@
     box-sizing: border-box;
     }
     #email {
-    width: 338px;
+        width: 338px;
+        @include tablet-small {
+            width: 260px;
+        }
     }
     .form__button {
         padding: 10px;
