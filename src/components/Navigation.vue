@@ -98,6 +98,7 @@ export default {
         transition: .5s ease all;
         padding-bottom: 4px;
         border-bottom: 1px solid transparent;
+        cursor: pointer;
         &:hover {
           color: #00afea;
           border-color: #00afea;

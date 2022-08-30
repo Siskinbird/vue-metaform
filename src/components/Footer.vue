@@ -86,8 +86,10 @@
     .footer {
         max-width: 100%;
         background: url('../assets/background/bgpattern1.png') repeat;
-        gap: 20px;
+
         height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
         color: #ffff;
         font-weight: 400;
             span {
@@ -100,13 +102,17 @@
     }
     .footer__row {
         display: flex;
-        padding-top: 20px;
         justify-content: space-between;
         font-size: 14px;
         font-weight: 500;
+        margin-bottom: 20px;
         a {
             color: #ffff;
             text-decoration: none;
+            transition: all ease-in-out .4s;
+            &:hover {
+                color: #00afea;
+            }
         }
         img {
             width: 20px;
