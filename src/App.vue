@@ -5,7 +5,7 @@
     <About />
     <Services />
     <FeedbackForm />
-    <router-view/>
+    <Footer> </Footer>
     </div>
 </template>
 
@@ -15,6 +15,7 @@
   import About from './components/About.vue';
   import Services from './components/Services.vue';
   import FeedbackForm from './components/FeedbackForm.vue';
+  import Footer from './components/Footer.vue';
   export default {
     name: "App",
     components: { 
@@ -22,7 +23,8 @@
       VideoBack,
       About,
       Services,
-      FeedbackForm
+      FeedbackForm,
+      Footer
     }
 };
 </script>
