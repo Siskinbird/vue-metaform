@@ -62,6 +62,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@mixin tablet-portrait {
+  @media (max-width: 543px) { @content; }
+}
   header {
     background: url("../assets/background/bgpattern1.png") repeat;
     z-index: 6;
@@ -105,6 +108,9 @@ export default {
         align-items: center;
         img {
           transition: .5s ease all;
+          @include tablet-portrait {
+            width: 50%;
+          }
         }
       }
 

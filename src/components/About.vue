@@ -28,7 +28,9 @@
 </script>
 
 <style scoped lang="scss">
-
+@mixin tablet-portrait {
+  @media (max-width: 543px) { @content; }
+}
 .about {
     background: url('../assets/background/bgpattern2.png') repeat;
     color: #6B6B6B;
@@ -45,17 +47,22 @@ h2 {
     font-size: 34px;
     padding: 20px auto;
     font-family: 'Montserrat', sans-serif;
-    
     font-weight: 500;
     span {
         font-weight: 600;
         color: #6CA09F; 
+    }
+    @include tablet-portrait {
+        font-size: 28px;
     }
 }
 
 p {
     margin: 5px;
     padding: 5px;
+        @include tablet-portrait {
+        text-align: center;
+    }
 }
 
 

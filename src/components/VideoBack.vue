@@ -22,7 +22,9 @@
 </script>
 
 <style scoped lang="scss">
-
+@mixin tablet-portrait {
+  @media (max-width: 543px) { @content; }
+}
 .video {
     position: relative;
     padding-bottom: 56%;
@@ -41,6 +43,9 @@
     overflow: hidden;
     background: url('../assets/video/poster.png') center no-repeat;
     background-size: cover;
+    @include tablet-portrait {
+        max-height: 70vh;
+    }
 }
 .intro:after {
     content: '';
