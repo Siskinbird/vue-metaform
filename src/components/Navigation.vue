@@ -1,24 +1,24 @@
 <template>
   <header :class="{'scrolledNav' : scrollPosition}">
-    <nav>
+    <nav class="container">
       <div class="branding">
         <a href="https://metaform.ru/"><img src="@/assets/logo/metaform_full.svg" alt="Metaform logo" /></a>
       </div>
       <ul v-show="!mobile" class="navigation">
-        <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
-        <li><router-link class="link" :to="{name: ''}">О компании</router-link></li>
-        <li><router-link class="link" :to="{name: ''}">Каталог</router-link></li>
-        <li><router-link class="link" :to="{name: ''}">Контакты</router-link></li>
+        <li ><a href="#" class="link">Главная</a></li>
+        <li><a href="#about" class="link">О компании</a></li>
+        <li><a href="#" class="link">Каталог</a></li>
+        <li><a href="#footer" class="link">Контакты</a></li>
       </ul>
       <div class="icon">
         <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active' : mobileNav}"></i>
       </div>
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
-          <li><router-link class="link" :to="{name: 'Home'}">Главная</router-link></li>
-          <li><router-link class="link" :to="{name: ''}">О компании</router-link></li>
-          <li><router-link class="link" :to="{name: ''}">Каталог</router-link></li>
-          <li><router-link class="link" :to="{name: ''}">Контакты</router-link></li>
+        <li @click="toggleMobileNav"><a href="#" class="link">Главная</a></li>
+        <li @click="toggleMobileNav"><a href="#about" class="link">О компании</a></li>
+        <li @click="toggleMobileNav"><a href="#" class="link">Каталог</a></li>
+        <li @click="toggleMobileNav"><a href="#footer" class="link">Контакты</a></li>
       </ul>
       </transition>
     </nav>
@@ -62,9 +62,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@mixin tablet-portrait {
+  @media (max-width: 543px) { @content; }
+}
   header {
     background: url("../assets/background/bgpattern1.png") repeat;
-    z-index: 99;
+    z-index: 6;
     width: 100%;
     position: fixed;
     transition: .5s ease all;
@@ -75,10 +78,6 @@ export default {
       padding: 12px 0;
       width: 90%;
       margin: 0 auto;
-      @media(min-width: 1140px) {
-        max-width: 1140px;
-      }
-
       ul,
       .link {
         font-weight: 500;
@@ -98,6 +97,7 @@ export default {
         transition: .5s ease all;
         padding-bottom: 4px;
         border-bottom: 1px solid transparent;
+        cursor: pointer;
         &:hover {
           color: #00afea;
           border-color: #00afea;
@@ -108,6 +108,9 @@ export default {
         align-items: center;
         img {
           transition: .5s ease all;
+          @include tablet-portrait {
+            width: 50%;
+          }
         }
       }
 

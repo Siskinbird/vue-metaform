@@ -5,8 +5,8 @@
     <About />
     <Services />
     <FeedbackForm />
-    <router-view/>
-    </div>
+    <Footer />
+   </div>
 </template>
 
 <script>
@@ -15,6 +15,7 @@
   import About from './components/About.vue';
   import Services from './components/Services.vue';
   import FeedbackForm from './components/FeedbackForm.vue';
+  import Footer from './components/Footer.vue';
   export default {
     name: "App",
     components: { 
@@ -22,7 +23,8 @@
       VideoBack,
       About,
       Services,
-      FeedbackForm
+      FeedbackForm,
+      Footer
     }
 };
 </script>
@@ -30,7 +32,9 @@
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   padding: 0;
   margin: 0;
@@ -50,5 +54,24 @@
   max-width: 1140px;
   margin: 0 auto;
 }
+
+/* @mixin phone-xs {
+  @media (max-width: 360px) { @content; }
+}
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin tablet-portrait {
+  @media (max-width: 600px) { @content; }
+}
+@mixin tablet {
+  @media (min-width: 900px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin xxl {
+  @media (max-width: 1800px) { @content; }
+} */
 
 </style>
