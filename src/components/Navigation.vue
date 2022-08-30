@@ -6,9 +6,9 @@
       </div>
       <ul v-show="!mobile" class="navigation">
         <li><a href="#" class="link">Главная</a></li>
-        <li><a href="#" class="link">О компании</a></li>
+        <li><a href="#about" class="link">О компании</a></li>
         <li><a href="#" class="link">Каталог</a></li>
-        <li><a href="#" class="link">Контакты</a></li>
+        <li><a href="#footer" class="link">Контакты</a></li>
       </ul>
       <div class="icon">
         <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active' : mobileNav}"></i>
@@ -16,9 +16,9 @@
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
         <li><a href="#" class="link">Главная</a></li>
-        <li><a href="#" class="link">О компании</a></li>
+        <li><a href="#about" class="link">О компании</a></li>
         <li><a href="#" class="link">Каталог</a></li>
-        <li><a href="#" class="link">Контакты</a></li>
+        <li><a href="#footer" class="link">Контакты</a></li>
       </ul>
       </transition>
     </nav>

@@ -32,7 +32,9 @@
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   padding: 0;
   margin: 0;

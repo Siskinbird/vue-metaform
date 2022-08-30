@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="about" id="about">
         
         <section class="container" data-aos="zoom-in" data-aos-duration="1000">
             <h2 class="about__title">О КОМПАНИИ ООО “<span>МЕТАФОРМ</span>”</h2>
