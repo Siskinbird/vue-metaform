@@ -83,10 +83,12 @@
 </script>
 
 <style scoped lang="scss">
+@mixin tablet-portrait {
+  @media (max-width: 600px) { @content; }
+}
     .footer {
         max-width: 100%;
         background: url('../assets/background/bgpattern1.png') repeat;
-
         height: auto;
         padding-top: 40px;
         padding-bottom: 40px;
@@ -99,6 +101,12 @@
 
     .footer__details {
         display: none;
+        @include tablet-portrait {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
     }
     .footer__row {
         display: flex;
@@ -118,10 +126,16 @@
             width: 20px;
             height: 20px;
         }
-
+         @include tablet-portrait {
+            display: none;
+        }
     }
+/*     .footer__column {
+
+    } */
     .brand__copyright {
         position: relative;
+        width: 53%;
         left: 40px;
         top: -10px;
         display: flex;

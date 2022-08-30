@@ -5,8 +5,8 @@
     <About />
     <Services />
     <FeedbackForm />
-    <Footer> </Footer>
-    </div>
+    <Footer />
+   </div>
 </template>
 
 <script>
@@ -53,14 +53,14 @@
   margin: 0 auto;
 }
 
-@mixin phone-xs {
+/* @mixin phone-xs {
   @media (max-width: 360px) { @content; }
 }
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
 @mixin tablet-portrait {
-  @media (min-width: 600px) { @content; }
+  @media (max-width: 600px) { @content; }
 }
 @mixin tablet {
   @media (min-width: 900px) { @content; }
@@ -70,6 +70,6 @@
 }
 @mixin xxl {
   @media (max-width: 1800px) { @content; }
-}
+} */
 
 </style>
