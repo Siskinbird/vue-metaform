@@ -5,6 +5,7 @@
     <About />
     <Services />
     <FeedbackForm />
+    <Contacts />
     <Footer />
    </div>
 </template>
@@ -14,6 +15,7 @@
   import VideoBack from './components/VideoBack.vue';
   import About from './components/About.vue';
   import Services from './components/Services.vue';
+  import Contacts from './components/Contacts.vue';
   import FeedbackForm from './components/FeedbackForm.vue';
   import Footer from './components/Footer.vue';
   export default {
@@ -23,6 +25,7 @@
       VideoBack,
       About,
       Services,
+      Contacts,
       FeedbackForm,
       Footer
     }
