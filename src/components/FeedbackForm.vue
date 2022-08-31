@@ -43,7 +43,7 @@
         @media (max-width: 500px) { @content; }
     }
     .container {
-        padding: 0;
+        padding: 30px 0;
     }
 
     .feedback {
