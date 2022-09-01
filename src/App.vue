@@ -59,6 +59,9 @@ html {
   margin: 0 auto;
 }
 
+[class*="copyrights-pane"] {
+  display: none !important;
+}
 /* @mixin phone-xs {
   @media (max-width: 360px) { @content; }
 }

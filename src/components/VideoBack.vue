@@ -1,5 +1,5 @@
 <template>
-    <div class="intro">
+    <section class="intro">
         <div class="video">
          <video autoplay muted loop class="video__media">
             <source src="../assets/video/1.mp4" type="video/mp4">
@@ -12,7 +12,7 @@
                 <p class="intro__subtitle-description">Применяем современное профессиональное оборудование разных стран (России, Италии и Германии), а также эффективно внедряем передовые технологии в производстве и бизнесе, что позволяет нам быть лидером в выпуске проволочных изделий и изготавливать качественный товар.</p>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -41,7 +41,7 @@
     position: relative;
     max-height: 50vh;
     overflow: hidden;
-    background: url('../assets/video/poster.png') center no-repeat;
+    background: url('../assets/video/poster.webp') center no-repeat;
     background-size: cover;
     @include tablet-portrait {
         max-height: 70vh;
