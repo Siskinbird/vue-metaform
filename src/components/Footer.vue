@@ -170,5 +170,15 @@
         flex-direction: column;
         gap: 5px;
     }
+    details {
+        a {
+            color: #ffff;
+            text-decoration: none;
+            transition: all ease-in-out .4s;
+            &:hover {
+                color: #00afea;
+            }
+        }
+    }
 
 </style>

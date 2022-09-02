@@ -6,4 +6,3 @@ createApp(App).mount('#app')
 
 AOS.init();
 
-
